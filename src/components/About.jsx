@@ -1,0 +1,173 @@
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.15, ease: "easeOut" },
+  }),
+};
+
+const values = [
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <path d="M14 2L17 9H24L18.5 13.5L20.5 21L14 17L7.5 21L9.5 13.5L4 9H11L14 2Z" fill="#E07B54"/>
+      </svg>
+    ),
+    title: "Excellence",
+    desc: "We uphold the highest standards in every property we represent, ensuring quality and value.",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="11" stroke="#E07B54" strokeWidth="2.5" fill="none"/>
+        <path d="M9 14L12.5 17.5L19 11" stroke="#E07B54" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    title: "Integrity",
+    desc: "Transparent dealings, honest advice, and ethical practices — always.",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <path d="M14 4C14 4 5 9 5 16C5 20.4 9.1 24 14 24C18.9 24 23 20.4 23 16C23 9 14 4 14 4Z" stroke="#E07B54" strokeWidth="2.5" fill="none" strokeLinejoin="round"/>
+        <circle cx="14" cy="16" r="3" fill="#E07B54"/>
+      </svg>
+    ),
+    title: "Passion",
+    desc: "Real estate is more than transactions — it's about finding the perfect place to call home.",
+  },
+];
+
+export default function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <section id="about" className="py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left: Visual */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            className="relative"
+          >
+            {/* Main image card */}
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1758448511487-15f69dd6107b?auto=format&fit=crop&w=1200&q=80"
+                alt="Modern residential building exterior"
+                className="w-full h-full object-cover"
+              />
+              {/* Subtle gradient for badge legibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 via-transparent to-transparent" />
+
+              {/* Overlay badge */}
+              <div className="absolute bottom-5 left-5 bg-white/95 backdrop-blur rounded-xl px-5 py-3 shadow-lg">
+                <div className="font-display font-bold text-navy-700 text-lg">Since 2009</div>
+                <div className="text-[#E07B54] text-xs font-semibold tracking-wide uppercase">Trusted Real Estate Partner</div>
+              </div>
+            </div>
+
+            {/* Secondary accent image */}
+            <motion.div
+              initial={{ opacity: 0, x: -20, y: -20 }}
+              animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="absolute -top-6 -left-6 w-28 h-28 sm:w-36 sm:h-36 rounded-xl overflow-hidden shadow-2xl border-4 border-white hidden sm:block"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1762028007806-751f2bef444a?auto=format&fit=crop&w=400&q=80"
+                alt="Residential property facade"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+
+            {/* Floating stat card */}
+            <motion.div
+              initial={{ opacity: 0, x: 30, y: 20 }}
+              animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="absolute -right-6 -bottom-6 bg-navy-700 text-white rounded-xl px-6 py-5 shadow-2xl hidden sm:block"
+            >
+              <div className="font-display text-3xl font-bold text-[#E07B54]">₹500Cr+</div>
+              <div className="text-navy-200 text-sm mt-1">Properties Managed</div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right: Content */}
+          <div>
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              custom={0}
+              className="text-[#E07B54] font-semibold text-sm tracking-[0.2em] uppercase mb-3"
+            >
+              Who We Are
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              custom={1}
+              className="section-heading mb-4"
+            >
+              India's Most Trusted Real Estate Partner
+            </motion.h2>
+            <div className="w-16 h-1 rounded-full mb-6" style={{ backgroundColor: "#E07B54" }} />
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              custom={2}
+              className="text-gray-600 leading-relaxed mb-4"
+            >
+              Founded in 2009, Golden Key Realty has been the cornerstone of real estate excellence across India. 
+              With offices in Delhi, Mumbai, Bangalore, and Pune, we offer unmatched expertise in residential, 
+              commercial, and luxury real estate.
+            </motion.p>
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              custom={3}
+              className="text-gray-600 leading-relaxed mb-10"
+            >
+              Our team of 200+ certified agents is dedicated to understanding your unique needs and delivering 
+              properties that exceed expectations — from first-time buyers to seasoned investors.
+            </motion.p>
+
+            {/* Values */}
+            <div className="grid gap-5">
+              {values.map((v, i) => (
+                <motion.div
+                  key={v.title}
+                  variants={fadeUp}
+                  initial="hidden"
+                  animate={isInView ? "visible" : "hidden"}
+                  custom={4 + i}
+                  className="flex items-start gap-4 p-4 rounded-xl border border-navy-50 hover:border-[#E07B54] hover:bg-[#E07B54]/5 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-navy-700/5 group-hover:bg-navy-700/10 flex items-center justify-center flex-shrink-0 transition-colors">
+                    {v.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-navy-700 mb-1">{v.title}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
