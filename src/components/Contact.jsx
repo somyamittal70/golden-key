@@ -9,7 +9,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Phone",
-    value: "+91 98765 43210",
+    value: "+91 9026611045",
     sub: "Mon–Sat, 9AM – 7PM",
   },
   {
@@ -20,7 +20,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Email",
-    value: "hello@goldenkey.in",
+    value: "hello@firstkeyhomes.in",
     sub: "Reply within 24 hours",
   },
   {
@@ -30,9 +30,9 @@ const contactInfo = [
         <circle cx="11" cy="8" r="2.5" stroke="#E07B54" strokeWidth="1.8" fill="none"/>
       </svg>
     ),
-    label: "Head Office",
-    value: "Cyber City, Gurgaon",
-    sub: "Haryana — 122 002",
+    label: "Office Address",
+    value: "Shop No.16, Second Floor, Opus Mall",
+    sub: "Sidharth Vihar",
   },
 ];
 
@@ -183,6 +183,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
+                        placeholder="Your Name"
                         className="w-full border border-gray-200 focus:border-[#E07B54] focus:ring-2 focus:ring-[#E07B54]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       />
                     </div>
@@ -194,6 +195,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
+                        placeholder="Your Phone"
                         className="w-full border border-gray-200 focus:border-[#E07B54] focus:ring-2 focus:ring-[#E07B54]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       />
                     </div>
@@ -204,6 +206,7 @@ export default function Contact() {
                       type="email"
                       name="email"
                       value={formData.email}
+                      placeholder="your@email.com"
                       onChange={handleChange}
                       className="w-full border border-gray-200 focus:border-[#E07B54] focus:ring-2 focus:ring-[#E07B54]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                     />
@@ -228,6 +231,7 @@ export default function Contact() {
                         onChange={handleChange}
                         className="w-full border border-gray-200 focus:border-[#E07B54] focus:ring-2 focus:ring-[#E07B54]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       >
+                        <option value="">Select a Service</option>
                         <option>Residential</option>
                         <option>Commercial</option>
                         <option>Plot/Land</option>
@@ -243,7 +247,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      placeholder="Tell us about your requirements — budget, location preference, BHK configuration..."
+                      placeholder="Tell us about your requirements — "
                       className="w-full border border-gray-200 focus:border-[#E07B54] focus:ring-2 focus:ring-[#E07B54]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white resize-none"
                     />
                   </div>

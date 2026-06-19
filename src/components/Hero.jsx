@@ -369,9 +369,9 @@ export default function Hero() {
           className="mt-16 pt-10 grid grid-cols-3 gap-6"
           style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
         >
-          <StatCounter end={1200} suffix="+" label="Properties Sold" />
+          <StatCounter end={500} suffix="+" label="Properties Sold" />
           <StatCounter end={98} suffix="%" label="Client Satisfaction" />
-          <StatCounter end={15} suffix="+" label="Years of Experience" />
+          <StatCounter end={12} suffix="+" label="Years of Experience" />
         </motion.div>
       </div>
 
