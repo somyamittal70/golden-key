@@ -183,7 +183,6 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        placeholder="Rahul Sharma"
                         className="w-full border border-gray-200 focus:border-[#E07B54] focus:ring-2 focus:ring-[#E07B54]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       />
                     </div>
@@ -195,7 +194,6 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        placeholder="+91 98765 43210"
                         className="w-full border border-gray-200 focus:border-[#E07B54] focus:ring-2 focus:ring-[#E07B54]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       />
                     </div>
@@ -207,7 +205,6 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="rahul@email.com"
                       className="w-full border border-gray-200 focus:border-[#E07B54] focus:ring-2 focus:ring-[#E07B54]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                     />
                   </div>
