@@ -51,7 +51,12 @@ export default function Hero() {
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  // Keep the parallax travel distance small and in fixed pixels (not %).
+  // Using "%" here was relative to the moving wrapper's own height, which
+  // changes as the section resizes (e.g. when content wraps on mobile),
+  // making the background visually "shrink" while scrolling. Pixels keep
+  // the motion constant regardless of section height.
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0px", "120px"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
@@ -70,12 +75,17 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col justify-center overflow-hidden"
       style={{ backgroundColor: "#0a1628" }}
     >
-      {/* Parallax background */}
-      <motion.div className="absolute inset-0" style={{ y: bgY }}>
+      {/* Parallax background — wrapper is taller than the section (inset
+          extended -top/-bottom) so that translating it for the parallax
+          effect never reveals its edge or visually compresses the image. */}
+      <motion.div
+        className="absolute left-0 right-0"
+        style={{ top: "-80px", bottom: "-80px", y: bgY }}
+      >
         <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85"
           alt="Luxury property"
-          className="w-full h-full object-cover scale-110"
+          className="w-full h-full object-cover"
         />
         <div
           className="absolute inset-0"

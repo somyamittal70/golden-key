@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Services", id: "services" },
   { label: "Gallery", id: "gallery" },
   { label: "FAQ", id: "faq" },
-  { label: "Contact", id: "contact-us" },
+  { label: "Contact Us", id: "contact-us" },
 ];
 
 const LogoIcon = () => (
@@ -140,7 +140,7 @@ export default function Header() {
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#E07B54")}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#1B3A6B")}
               style={{ backgroundColor: "#1B3A6B" }}
-              className="ml-4 text-white text-sm font-semibold px-5 py-2 rounded-2xl transition-all duration-300"
+              className="ml-4 text-white text-sm font-semibold px-6 py-2.5 rounded-2xl transition-all duration-300"
             >
               Free Consultation
             </motion.button>
