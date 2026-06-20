@@ -153,10 +153,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-[11px] sm:text-xs text-navy-400 text-center sm:text-left">
           <p>© {currentYear} Golden Key Realty Pvt. Ltd. All rights reserved.</p>
           <p className="text-navy-500">
-            Developed by{" "}
-            <span style={{ color: "#E07B54" }} className="font-medium">
-              Debox Technology
-            </span>
+            Developed by Debox Technology
           </p>
         </div>
       </div>
