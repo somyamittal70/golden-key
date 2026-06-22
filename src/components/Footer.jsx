@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 const LogoIcon = () => (
   <svg width="36" height="36" viewBox="0 0 42 42" fill="none">
-    <circle cx="16" cy="16" r="11" stroke="#E07B54" strokeWidth="3.5" fill="none"/>
-    <circle cx="16" cy="16" r="5" fill="#E07B54"/>
-    <rect x="24" y="18" width="16" height="4" rx="2" fill="#E07B54"/>
-    <rect x="34" y="22" width="4" height="6" rx="1.5" fill="#E07B54"/>
-    <rect x="28" y="22" width="4" height="4" rx="1.5" fill="#E07B54"/>
+    <circle cx="16" cy="16" r="11" stroke="#c18c3b" strokeWidth="3.5" fill="none"/>
+    <circle cx="16" cy="16" r="5" fill="#c18c3b"/>
+    <rect x="24" y="18" width="16" height="4" rx="2" fill="#c18c3b"/>
+    <rect x="34" y="22" width="4" height="6" rx="1.5" fill="#c18c3b"/>
+    <rect x="28" y="22" width="4" height="4" rx="1.5" fill="#c18c3b"/>
   </svg>
 );
 
@@ -78,14 +78,14 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto flex-shrink-0">
               <button
                 onClick={() => scrollTo("contact-us")}
-                style={{ backgroundColor: "#E07B54" }}
+                style={{ backgroundColor: "#c18c3b" }}
                 className="hover:opacity-90 text-white font-semibold px-8 py-3 rounded-sm transition-opacity text-sm w-full sm:w-auto"
               >
                 Get Started Today
               </button>
               <a
                 href="tel:+919026611045"
-                className="border border-white/20 hover:border-[#E07B54] text-white hover:text-[#E07B54] font-semibold px-6 py-3 rounded-sm transition-colors text-sm flex items-center justify-center gap-2 w-full sm:w-auto"
+                className="border border-white/20 hover:border-[#c18c3b] text-white hover:text-[#c18c3b] font-semibold px-6 py-3 rounded-sm transition-colors text-sm flex items-center justify-center gap-2 w-full sm:w-auto"
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 3C3 2.4 3.4 2 4 2H6.3C6.8 2 7.2 2.3 7.3 2.8L8 5.5C8.1 6 7.9 6.5 7.5 6.7L6.4 7.3C7.2 9.2 8.8 10.8 10.7 11.6L11.3 10.5C11.5 10.1 12 9.9 12.5 10L15.2 10.7C15.7 10.8 16 11.2 16 11.7V14C16 14.6 15.6 15 15 15C7.3 15 1 8.7 1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -106,7 +106,7 @@ export default function Footer() {
               <LogoIcon />
               <div>
                 <span className="font-display text-base sm:text-lg font-bold leading-tight block text-white">Golden Key</span>
-                <span style={{ color: "#E07B54" }} className="text-xs font-semibold tracking-[0.2em] uppercase block -mt-0.5">Realty</span>
+                <span style={{ color: "#c18c3b" }} className="text-xs font-semibold tracking-[0.2em] uppercase block -mt-0.5">Realty</span>
               </div>
             </div>
             <p className="text-navy-300 text-sm leading-relaxed mb-6 max-w-xs">
@@ -117,7 +117,7 @@ export default function Footer() {
               {["RERA Certified", "ISO 9001:2015", "NAR Member"].map((badge) => (
                 <span
                   key={badge}
-                  style={{ borderColor: "rgba(224, 123, 84, 0.3)", color: "#E07B54" }}
+                  style={{ borderColor: "rgba(224, 123, 84, 0.3)", color: "#c18c3b" }}
                   className="text-[11px] sm:text-xs border px-2.5 sm:px-3 py-1 rounded-full whitespace-nowrap"
                 >
                   {badge}
@@ -136,7 +136,7 @@ export default function Footer() {
                     <button
                       type="button"
                       onClick={() => scrollTo(link.id)}
-                      className="text-navy-300 hover:text-[#E07B54] text-xs sm:text-sm transition-colors text-left"
+                      className="text-navy-300 hover:text-[#c18c3b] text-xs sm:text-sm transition-colors text-left"
                     >
                       {link.label}
                     </button>

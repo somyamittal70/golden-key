@@ -14,7 +14,7 @@ const values = [
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <path d="M14 2L17 9H24L18.5 13.5L20.5 21L14 17L7.5 21L9.5 13.5L4 9H11L14 2Z" fill="#E07B54"/>
+        <path d="M14 2L17 9H24L18.5 13.5L20.5 21L14 17L7.5 21L9.5 13.5L4 9H11L14 2Z" fill="#c18c3b"/>
       </svg>
     ),
     title: "Excellence",
@@ -23,8 +23,8 @@ const values = [
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <circle cx="14" cy="14" r="11" stroke="#E07B54" strokeWidth="2.5" fill="none"/>
-        <path d="M9 14L12.5 17.5L19 11" stroke="#E07B54" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="14" cy="14" r="11" stroke="#c18c3b" strokeWidth="2.5" fill="none"/>
+        <path d="M9 14L12.5 17.5L19 11" stroke="#c18c3b" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     title: "Integrity",
@@ -33,8 +33,8 @@ const values = [
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <path d="M14 4C14 4 5 9 5 16C5 20.4 9.1 24 14 24C18.9 24 23 20.4 23 16C23 9 14 4 14 4Z" stroke="#E07B54" strokeWidth="2.5" fill="none" strokeLinejoin="round"/>
-        <circle cx="14" cy="16" r="3" fill="#E07B54"/>
+        <path d="M14 4C14 4 5 9 5 16C5 20.4 9.1 24 14 24C18.9 24 23 20.4 23 16C23 9 14 4 14 4Z" stroke="#c18c3b" strokeWidth="2.5" fill="none" strokeLinejoin="round"/>
+        <circle cx="14" cy="16" r="3" fill="#c18c3b"/>
       </svg>
     ),
     title: "Passion",
@@ -71,7 +71,7 @@ export default function About() {
               {/* Overlay badge */}
               <div className="absolute bottom-3 left-3 sm:bottom-5 sm:left-5 bg-white/95 backdrop-blur rounded-lg sm:rounded-xl px-3 py-2 sm:px-5 sm:py-3 shadow-lg">
                 <div className="font-display font-bold text-navy-700 text-sm sm:text-lg">Since 2009</div>
-                <div className="text-[#E07B54] text-[10px] sm:text-xs font-semibold tracking-wide uppercase">
+                <div className="text-[#c18c3b] text-[10px] sm:text-xs font-semibold tracking-wide uppercase">
                   Trusted Real Estate Partner
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function About() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="absolute right-2 -bottom-5 sm:-right-6 sm:-bottom-6 bg-navy-700 text-white rounded-lg sm:rounded-xl px-4 py-3 sm:px-6 sm:py-5 shadow-2xl"
             >
-              <div className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-[#E07B54]">₹500Cr+</div>
+              <div className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-[#c18c3b]">₹500Cr+</div>
               <div className="text-navy-200 text-xs sm:text-sm mt-0.5 sm:mt-1">Properties Managed</div>
             </motion.div>
           </motion.div>
@@ -111,7 +111,7 @@ export default function About() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               custom={0}
-              className="text-[#E07B54] font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase mb-3"
+              className="text-[#c18c3b] font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase mb-3"
             >
               Who We Are
             </motion.p>
@@ -124,7 +124,7 @@ export default function About() {
             >
               India's Most Trusted Real Estate Partner
             </motion.h2>
-            <div className="w-16 h-1 rounded-full mb-5 sm:mb-6" style={{ backgroundColor: "#E07B54" }} />
+            <div className="w-16 h-1 rounded-full mb-5 sm:mb-6" style={{ backgroundColor: "#c18c3b" }} />
             <motion.p
               variants={fadeUp}
               initial="hidden"
@@ -156,7 +156,7 @@ export default function About() {
                   initial="hidden"
                   animate={isInView ? "visible" : "hidden"}
                   custom={4 + i}
-                  className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-navy-50 hover:border-[#E07B54] hover:bg-[#E07B54]/5 transition-all duration-300 group"
+                  className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-navy-50 hover:border-[#c18c3b] hover:bg-[#c18c3b]/5 transition-all duration-300 group"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-navy-700/5 group-hover:bg-navy-700/10 flex items-center justify-center flex-shrink-0 transition-colors">
                     {v.icon}

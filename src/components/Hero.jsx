@@ -30,7 +30,7 @@ function StatCounter({ end, label, suffix = "", prefix = "" }) {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: "#E07B54" }}>
+      <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: "#c18c3b" }}>
         {prefix}{count.toLocaleString()}{suffix}
       </div>
       <div className="text-white/50 text-[10px] sm:text-xs mt-1.5 font-medium tracking-widest uppercase">{label}</div>
@@ -105,9 +105,9 @@ export default function Hero() {
 
       {/* Ambient glow */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none"
-        style={{ backgroundColor: "#E07B54" }} />
+        style={{ backgroundColor: "#c18c3b" }} />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-8 blur-3xl pointer-events-none"
-        style={{ backgroundColor: "#1B3A6B" }} />
+        style={{ backgroundColor: "#032b53" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 sm:pb-20 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -123,8 +123,8 @@ export default function Hero() {
               className="inline-flex items-center gap-2.5 mb-6 sm:mb-8 rounded-full px-4 py-1.5"
               style={{ backgroundColor: "rgba(224,123,84,0.12)", border: "1px solid rgba(224,123,84,0.28)" }}
             >
-              <span className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: "#E07B54" }} />
-              <span className="text-[11px] sm:text-xs font-semibold tracking-[0.15em] uppercase" style={{ color: "#E07B54" }}>
+              <span className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: "#c18c3b" }} />
+              <span className="text-[11px] sm:text-xs font-semibold tracking-[0.15em] uppercase" style={{ color: "#c18c3b" }}>
                 India's Trusted Real Estate Partner
               </span>
             </motion.div>
@@ -138,7 +138,7 @@ export default function Hero() {
               style={{ fontSize: "clamp(2.1rem, 6vw, 4.2rem)" }}
             >
               Find Your Perfect<br />
-              <span style={{ color: "#E07B54" }}>Home</span> in India
+              <span style={{ color: "#c18c3b" }}>Home</span> in India
             </motion.h1>
 
             {/* Sub-headline */}
@@ -168,7 +168,7 @@ export default function Hero() {
                     onClick={() => setActiveTab(tab)}
                     className="flex-1 py-3 text-xs sm:text-sm font-semibold transition-all duration-200 relative"
                     style={{
-                      color: activeTab === tab ? "#E07B54" : "rgba(255,255,255,0.45)",
+                      color: activeTab === tab ? "#c18c3b" : "rgba(255,255,255,0.45)",
                       backgroundColor: activeTab === tab ? "rgba(224,123,84,0.1)" : "transparent",
                     }}
                   >
@@ -177,7 +177,7 @@ export default function Hero() {
                       <motion.span
                         layoutId="tabUnderline"
                         className="absolute bottom-0 left-0 right-0 h-0.5"
-                        style={{ backgroundColor: "#E07B54" }}
+                        style={{ backgroundColor: "#c18c3b" }}
                       />
                     )}
                   </button>
@@ -233,7 +233,7 @@ export default function Hero() {
                   type="button"
                   onClick={() => scrollToSection("gallery")}
                   className="px-6 py-2.5 rounded-lg text-white font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 whitespace-nowrap hover:opacity-90 active:scale-95"
-                  style={{ backgroundColor: "#E07B54" }}
+                  style={{ backgroundColor: "#c18c3b" }}
                 >
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                     <circle cx="6.5" cy="6.5" r="5" stroke="white" strokeWidth="1.5"/>
@@ -261,7 +261,7 @@ export default function Hero() {
                   className="flex items-center gap-1.5 text-[11px] sm:text-xs font-medium whitespace-nowrap"
                   style={{ color: "rgba(255,255,255,0.45)" }}
                 >
-                  <span style={{ color: "#E07B54" }}>{b.icon}</span>
+                  <span style={{ color: "#c18c3b" }}>{b.icon}</span>
                   {b.text}
                 </span>
               ))}
@@ -323,11 +323,11 @@ export default function Hero() {
                 />
                 {/* Price tag inside image */}
                 <div className="absolute bottom-4 xl:bottom-5 left-4 xl:left-5 right-4 xl:right-5">
-                  <div className="text-[10px] xl:text-xs font-semibold mb-1" style={{ color: "#E07B54", letterSpacing: "0.1em" }}>FEATURED PROPERTY</div>
+                  <div className="text-[10px] xl:text-xs font-semibold mb-1" style={{ color: "#c18c3b", letterSpacing: "0.1em" }}>FEATURED PROPERTY</div>
                   <div className="text-white font-bold text-sm xl:text-base leading-tight">Modern Villa · South Delhi</div>
                   <div className="flex items-center justify-between mt-2 gap-2">
-                    <span className="font-bold text-base xl:text-lg" style={{ color: "#E07B54" }}>₹ 4.8 Cr</span>
-                    <span className="text-[10px] xl:text-xs px-2 xl:px-2.5 py-1 rounded-full whitespace-nowrap" style={{ backgroundColor: "rgba(224,123,84,0.2)", color: "#E07B54", border: "1px solid rgba(224,123,84,0.3)" }}>4 BHK · 3,200 sqft</span>
+                    <span className="font-bold text-base xl:text-lg" style={{ color: "#c18c3b" }}>₹ 4.8 Cr</span>
+                    <span className="text-[10px] xl:text-xs px-2 xl:px-2.5 py-1 rounded-full whitespace-nowrap" style={{ backgroundColor: "rgba(224,123,84,0.2)", color: "#c18c3b", border: "1px solid rgba(224,123,84,0.3)" }}>4 BHK · 3,200 sqft</span>
                   </div>
                 </div>
               </div>
@@ -349,11 +349,11 @@ export default function Hero() {
               <div className="w-8 h-8 xl:w-9 xl:h-9 rounded-full flex items-center justify-center flex-shrink-0"
                 style={{ backgroundColor: "rgba(224,123,84,0.12)" }}>
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                  <path d="M9 1.5L11.2 6.4L16.5 7.2L12.75 10.8L13.7 16.1L9 13.6L4.3 16.1L5.25 10.8L1.5 7.2L6.8 6.4L9 1.5Z" fill="#E07B54"/>
+                  <path d="M9 1.5L11.2 6.4L16.5 7.2L12.75 10.8L13.7 16.1L9 13.6L4.3 16.1L5.25 10.8L1.5 7.2L6.8 6.4L9 1.5Z" fill="#c18c3b"/>
                 </svg>
               </div>
               <div>
-                <div className="font-bold text-xs xl:text-sm" style={{ color: "#1B3A6B" }}>Top Rated</div>
+                <div className="font-bold text-xs xl:text-sm" style={{ color: "#032b53" }}>Top Rated</div>
                 <div className="text-[10px] xl:text-xs whitespace-nowrap" style={{ color: "#888" }}>4.9 / 5 · 2,400+</div>
               </div>
             </motion.div>
@@ -375,8 +375,8 @@ export default function Hero() {
                 <span className="w-2 h-2 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: "#22c55e" }} />
                 <span className="text-[10px] xl:text-xs font-semibold" style={{ color: "#22c55e" }}>New Listing</span>
               </div>
-              <div className="font-bold text-xs xl:text-sm" style={{ color: "#1B3A6B" }}>3 BHK · Gurgaon</div>
-              <div className="font-semibold text-xs xl:text-sm mt-0.5" style={{ color: "#E07B54" }}>₹ 2.4 Cr onwards</div>
+              <div className="font-bold text-xs xl:text-sm" style={{ color: "#032b53" }}>3 BHK · Gurgaon</div>
+              <div className="font-semibold text-xs xl:text-sm mt-0.5" style={{ color: "#c18c3b" }}>₹ 2.4 Cr onwards</div>
               <div className="text-[10px] xl:text-xs mt-1" style={{ color: "#aaa" }}>Ready to move · 1,850 sq ft</div>
             </motion.div>
           </motion.div>
@@ -409,7 +409,7 @@ export default function Hero() {
           className="w-6 h-10 rounded-full flex items-start justify-center pt-2"
           style={{ border: "1.5px solid rgba(255,255,255,0.18)" }}
         >
-          <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#E07B54" }} />
+          <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#c18c3b" }} />
         </motion.div>
       </motion.div>
     </section>

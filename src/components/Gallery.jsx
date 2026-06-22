@@ -101,7 +101,7 @@ function PropertyCard({ prop, i }) {
 
         {/* Featured badge */}
         {prop.featured && (
-          <div className="absolute top-4 left-4 bg-[#E07B54] text-white text-xs font-bold px-3 py-1 rounded-full">
+          <div className="absolute top-4 left-4 bg-[#c18c3b] text-white text-xs font-bold px-3 py-1 rounded-full">
             ★ Featured
           </div>
         )}
@@ -120,7 +120,7 @@ function PropertyCard({ prop, i }) {
               exit={{ opacity: 0 }}
               className="absolute inset-0 bg-navy-700/60 flex items-center justify-center"
             >
-              <button className="bg-[#E07B54] hover:bg-[#e9926b] text-white font-semibold px-6 py-2.5 rounded-sm text-sm transition-colors">
+              <button className="bg-[#c18c3b] hover:bg-[#e9926b] text-white font-semibold px-6 py-2.5 rounded-sm text-sm transition-colors">
                 View Property
               </button>
             </motion.div>
@@ -134,7 +134,7 @@ function PropertyCard({ prop, i }) {
           <h3 className="font-display font-bold text-navy-700 text-base leading-tight">
             {prop.title}
           </h3>
-          <span className="text-[#E07B54] font-bold text-base ml-2 whitespace-nowrap">
+          <span className="text-[#c18c3b] font-bold text-base ml-2 whitespace-nowrap">
             {prop.price}
           </span>
         </div>
@@ -237,11 +237,11 @@ export default function Gallery() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <p className="text-[#E07B54] font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+          <p className="text-[#c18c3b] font-semibold text-sm tracking-[0.2em] uppercase mb-3">
             Our Properties
           </p>
           <h2 className="section-heading mb-4">Featured Listings</h2>
-          <div className="w-16 h-1 rounded-full mx-auto" style={{ backgroundColor: "#E07B54" }} />
+          <div className="w-16 h-1 rounded-full mx-auto" style={{ backgroundColor: "#c18c3b" }} />
           <p className="text-gray-500 mt-6 max-w-lg mx-auto leading-relaxed">
             Explore our curated selection of premium properties across India's
             most sought-after locations.

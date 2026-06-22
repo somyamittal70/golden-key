@@ -39,7 +39,7 @@ function FAQItem({ item, index, isOpen, onToggle }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08, duration: 0.5 }}
       className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-        isOpen ? "border-[#E07B54]/40 shadow-md shadow-[#E07B54]/10" : "border-gray-100 hover:border-navy-100"
+        isOpen ? "border-[#c18c3b]/40 shadow-md shadow-[#c18c3b]/10" : "border-gray-100 hover:border-navy-100"
       }`}
     >
       <button
@@ -57,7 +57,7 @@ function FAQItem({ item, index, isOpen, onToggle }) {
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.25 }}
           className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-            isOpen ? "bg-[#E07B54] text-white" : "bg-gray-100 text-gray-500"
+            isOpen ? "bg-[#c18c3b] text-white" : "bg-gray-100 text-gray-500"
           }`}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -101,23 +101,23 @@ export default function FAQ() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <p className="text-[#E07B54] font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+            <p className="text-[#c18c3b] font-semibold text-sm tracking-[0.2em] uppercase mb-3">
               Got Questions?
             </p>
             <h2 className="section-heading mb-4 leading-tight">
               Frequently Asked Questions
             </h2>
-            <div className="w-16 h-1 rounded-full" style={{ backgroundColor: "#E07B54" }} />
+            <div className="w-16 h-1 rounded-full" style={{ backgroundColor: "#c18c3b" }} />
             <p className="text-gray-500 leading-relaxed mt-6 mb-8">
               Everything you need to know about buying, selling, and managing property with Golden Key Realty.
             </p>
 
             {/* CTA card */}
             <div className="bg-navy-700 rounded-2xl p-7 text-white">
-              <div className="w-12 h-12 rounded-full bg-[#E07B54]/20 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#c18c3b]/20 flex items-center justify-center mb-4">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M6.6 2C5.2 2 4 3.1 4 4.5v15c0 1.4 1.2 2.5 2.6 2.5h10.8c1.4 0 2.6-1.1 2.6-2.5v-15C20 3.1 18.8 2 17.4 2H6.6Z" stroke="#E07B54" strokeWidth="1.5" fill="none"/>
-                  <path d="M9 6.5H15M9 10H15M9 13.5H12" stroke="#E07B54" strokeWidth="1.5" strokeLinecap="round"/>
+                  <path d="M6.6 2C5.2 2 4 3.1 4 4.5v15c0 1.4 1.2 2.5 2.6 2.5h10.8c1.4 0 2.6-1.1 2.6-2.5v-15C20 3.1 18.8 2 17.4 2H6.6Z" stroke="#c18c3b" strokeWidth="1.5" fill="none"/>
+                  <path d="M9 6.5H15M9 10H15M9 13.5H12" stroke="#c18c3b" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               </div>
               <h4 className="font-display font-bold text-lg mb-2">Still have questions?</h4>
@@ -130,7 +130,7 @@ export default function FAQ() {
                   e.preventDefault();
                   document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="block text-center bg-[#E07B54] hover:bg-[#e9926b] text-white font-semibold py-3 rounded-sm text-sm transition-colors"
+                className="block text-center bg-[#c18c3b] hover:bg-[#e9926b] text-white font-semibold py-3 rounded-sm text-sm transition-colors"
               >
                 Contact Our Team
               </a>
