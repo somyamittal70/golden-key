@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
+import logo from "../assets/logo.png"
 
 const LogoIcon = () => (
-  <svg width="36" height="36" viewBox="0 0 42 42" fill="none">
-    <circle cx="16" cy="16" r="11" stroke="#c18c3b" strokeWidth="3.5" fill="none"/>
-    <circle cx="16" cy="16" r="5" fill="#c18c3b"/>
-    <rect x="24" y="18" width="16" height="4" rx="2" fill="#c18c3b"/>
-    <rect x="34" y="22" width="4" height="6" rx="1.5" fill="#c18c3b"/>
-    <rect x="28" y="22" width="4" height="4" rx="1.5" fill="#c18c3b"/>
-  </svg>
+  <img src={logo} alt="Golden Key Realty Logo" width="36" height="36" style={{ objectFit: "contain", backgroundColor: "#ffff" }} />
 );
 
 // Each link now carries the real section id it should scroll to.
