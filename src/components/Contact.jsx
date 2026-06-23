@@ -61,7 +61,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact-us" className="py-24 bg-white">
+    <section id="contact-us" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Heading */}
         <motion.div
@@ -70,7 +70,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-[#c18c3b] font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+          <p className="text-[#c18c3b] font-semibold text-sm tracking-[0.2em] uppercase mt-3 mb-3">
             Get In Touch
           </p>
           <h2 className="section-heading mb-4">Contact Us</h2>

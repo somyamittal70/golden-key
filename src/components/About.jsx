@@ -91,17 +91,6 @@ export default function About() {
                 loading="lazy"
               />
             </motion.div>
-
-            {/* Floating stat card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30, y: 20 }}
-              animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="absolute right-2 -bottom-5 sm:-right-6 sm:-bottom-6 bg-navy-700 text-white rounded-lg sm:rounded-xl px-4 py-3 sm:px-6 sm:py-5 shadow-2xl"
-            >
-              <div className="font-display text-xl sm:text-2xl lg:text-3xl font-bold text-[#c18c3b]">₹500Cr+</div>
-              <div className="text-navy-200 text-xs sm:text-sm mt-0.5 sm:mt-1">Properties Managed</div>
-            </motion.div>
           </motion.div>
 
           {/* Right: Content */}

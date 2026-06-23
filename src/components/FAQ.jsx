@@ -91,7 +91,7 @@ export default function FAQ() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="faq" className="py-24 bg-gray-50/60">
+    <section id="faq" className="py-19 bg-gray-50/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <div className="grid lg:grid-cols-5 gap-16 items-start">
           {/* Left sidebar */}
