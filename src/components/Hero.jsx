@@ -112,15 +112,24 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 sm:pb-20 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          {/* LEFT: Content */}
-          <motion.div style={{ y: textY, opacity }}>
+          {/* LEFT: Content.
+              Below `lg` the image column is hidden (see below), so this
+              column is alone in the grid. Centering it (text-center +
+              mx-auto on inner blocks) keeps things balanced instead of
+              looking pinned to the left with empty space on the right.
+              From `lg:` upward it goes back to left-aligned, two-column
+              layout, unchanged from before. */}
+          <motion.div
+            style={{ y: textY, opacity }}
+            className="text-center lg:text-left"
+          >
 
             {/* Eyebrow pill */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2.5 mb-6 sm:mb-8 rounded-full px-4 py-1.5"
+              className="inline-flex items-center gap-2.5 mb-6 sm:mb-8 mx-auto lg:mx-0 rounded-full px-4 py-1.5"
               style={{ backgroundColor: "rgba(224,123,84,0.12)", border: "1px solid rgba(224,123,84,0.28)" }}
             >
               <span className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0" style={{ backgroundColor: "#c18c3b" }} />
@@ -146,7 +155,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-white/55 text-sm sm:text-base lg:text-lg leading-relaxed mb-8 sm:mb-10 max-w-md"
+              className="text-white/55 text-sm sm:text-base lg:text-lg leading-relaxed mb-8 sm:mb-10 max-w-md mx-auto lg:mx-0"
             >
               Over 15 years of expertise in premium residential and commercial properties across India's top cities.
             </motion.p>
@@ -184,8 +193,15 @@ export default function Hero() {
                 ))}
               </div>
 
-              {/* Search inputs */}
-              <div className="p-3 sm:p-4 flex flex-col sm:flex-row gap-3">
+              {/* Search inputs.
+                  NOTE: switched the row breakpoint from `sm:` (640px) to `md:` (768px+).
+                  At exactly 768px there isn't enough horizontal room for two selects
+                  plus the Search button in one row without everything feeling cramped,
+                  so on `sm`/`md` it now stacks vertically (full-width, comfortable),
+                  and only goes to a single row from `lg:` (1024px) upward, where there
+                  is enough width. This only affects the 640–1023px band; nothing below
+                  640px or at/above 1024px changes. */}
+              <div className="p-3 sm:p-4 flex flex-col lg:flex-row gap-3">
                 <div className="flex-1 relative min-w-0">
                   <svg className="absolute left-3 top-1/2 -translate-y-1/2 opacity-40 pointer-events-none" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14 8 14C8 14 12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5Z" stroke="white" strokeWidth="1.4"/>
@@ -249,7 +265,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.55 }}
-              className="flex flex-wrap gap-3 sm:gap-4"
+              className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4"
             >
               {[
                 { icon: "✓", text: "RERA Certified" },
@@ -268,8 +284,8 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT: Visual — hidden below lg, where there isn't enough width for the
-              image card plus its two floating badges without overlapping. */}
+          {/* RIGHT: Visual — full animated version, desktop only (lg+, 1024px+).
+              Unchanged from before: still hidden below lg. */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -380,6 +396,7 @@ export default function Hero() {
               <div className="text-[10px] xl:text-xs mt-1" style={{ color: "#aaa" }}>Ready to move · 1,850 sq ft</div>
             </motion.div>
           </motion.div>
+
         </div>
 
         {/* Stats row */}
