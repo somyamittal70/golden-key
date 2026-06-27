@@ -103,11 +103,26 @@ export default function Hero() {
         }}
       />
 
-      {/* Ambient glow */}
-      <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none"
-        style={{ backgroundColor: "#c18c3b" }} />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-8 blur-3xl pointer-events-none"
-        style={{ backgroundColor: "#032b53" }} />
+      {/* Ambient glow.
+          NOTE: previously these were positioned with `left-1/4`/`right-1/4`
+          combined with a fixed w-96/w-64. At very small viewports (e.g.
+          320px) that pushed part of each circle's box past the section's
+          edge, and with the blur-3xl filter applied, some browsers extend
+          the filter's paint/layout area slightly beyond the element's own
+          box — which was enough to create a horizontal scrollbar (visible
+          as a thin white sliver on the right) even with overflow-hidden on
+          the section. Capping width with max-w-full and keeping the glow
+          inset from the edges (instead of letting it hang off one side)
+          keeps it fully inside the section at every viewport width.
+          NOTE: extracted to a dedicated wrapper with overflow-hidden so
+          the blur filter's paint area is clipped at the wrapper, not just
+          relying on the section's own overflow-hidden. */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 w-72 max-w-full sm:w-96 h-72 sm:h-96 rounded-full opacity-10 blur-3xl"
+          style={{ backgroundColor: "#c18c3b" }} />
+        <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 w-48 max-w-full sm:w-64 h-48 sm:h-64 rounded-full opacity-8 blur-3xl"
+          style={{ backgroundColor: "#032b53" }} />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 sm:pb-20 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
