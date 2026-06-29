@@ -142,7 +142,7 @@ export default function Services() {
               className={`relative bg-gradient-to-br ${s.color} rounded-2xl border border-gray-100 hover:border-[#c18c3b]/40 hover:shadow-xl hover:shadow-[#c18c3b]/10 transition-all duration-300 group overflow-hidden`}
             >
               {/* Image header */}
-              <div className="relative h-36 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img src={s.image} alt={s.title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-700/50 to-transparent" />
                 {/* Badge */}

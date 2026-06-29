@@ -79,7 +79,7 @@ export default function Footer() {
                 Get Started Today
               </button>
               <a
-                href="tel:+919026611045"
+                href="tel:+9170112 14499"
                 className="border border-white/20 hover:border-[#c18c3b] text-white hover:text-[#c18c3b] font-semibold px-6 py-3 rounded-sm transition-colors text-sm flex items-center justify-center gap-2 w-full sm:w-auto"
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

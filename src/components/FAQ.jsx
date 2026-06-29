@@ -38,16 +38,16 @@ function FAQItem({ item, index, isOpen, onToggle }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08, duration: 0.5 }}
-      className={`border rounded-xl overflow-hidden transition-all duration-300 ${
+      className={`border rounded-xl overflow-hidden transition-all duration-300 w-full min-w-0 ${
         isOpen ? "border-[#c18c3b]/40 shadow-md shadow-[#c18c3b]/10" : "border-gray-100 hover:border-navy-100"
       }`}
     >
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-6 py-5 text-left group"
+        className="w-full min-w-0 flex items-center justify-between gap-3 px-4 sm:px-6 py-4 sm:py-5 text-left group"
       >
         <span
-          className={`font-semibold text-sm md:text-base pr-4 transition-colors ${
+          className={`font-semibold text-sm md:text-base pr-2 sm:pr-4 transition-colors min-w-0 break-words ${
             isOpen ? "text-navy-700" : "text-gray-700 group-hover:text-navy-700"
           }`}
         >
@@ -75,7 +75,7 @@ function FAQItem({ item, index, isOpen, onToggle }) {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50">
+            <div className="px-4 sm:px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-50 break-words">
               <div className="pt-4">{item.a}</div>
             </div>
           </motion.div>
@@ -91,37 +91,37 @@ export default function FAQ() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="faq" className="py-19 bg-gray-50/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
-        <div className="grid lg:grid-cols-5 gap-16 items-start">
+    <section id="faq" className="py-19 bg-gray-50/60 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" ref={ref}>
+        <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
           {/* Left sidebar */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            className="lg:col-span-2 min-w-0"
           >
             <p className="text-[#c18c3b] font-semibold text-sm tracking-[0.2em] uppercase mb-3">
               Got Questions?
             </p>
-            <h2 className="section-heading mb-4 leading-tight">
+            <h2 className="section-heading mb-4 leading-tight break-words">
               Frequently Asked Questions
             </h2>
             <div className="w-16 h-1 rounded-full" style={{ backgroundColor: "#c18c3b" }} />
-            <p className="text-gray-500 leading-relaxed mt-6 mb-8">
+            <p className="text-gray-500 leading-relaxed mt-6 mb-8 break-words">
               Everything you need to know about buying, selling, and managing property with Golden Key Realty.
             </p>
 
             {/* CTA card */}
-            <div className="bg-navy-700 rounded-2xl p-7 text-white">
+            <div className="bg-navy-700 rounded-2xl p-5 sm:p-7 text-white min-w-0">
               <div className="w-12 h-12 rounded-full bg-[#c18c3b]/20 flex items-center justify-center mb-4">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M6.6 2C5.2 2 4 3.1 4 4.5v15c0 1.4 1.2 2.5 2.6 2.5h10.8c1.4 0 2.6-1.1 2.6-2.5v-15C20 3.1 18.8 2 17.4 2H6.6Z" stroke="#c18c3b" strokeWidth="1.5" fill="none"/>
                   <path d="M9 6.5H15M9 10H15M9 13.5H12" stroke="#c18c3b" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               </div>
-              <h4 className="font-display font-bold text-lg mb-2">Still have questions?</h4>
-              <p className="text-navy-200 text-sm leading-relaxed mb-5">
+              <h4 className="font-display font-bold text-lg mb-2 break-words">Still have questions?</h4>
+              <p className="text-navy-200 text-sm leading-relaxed mb-5 break-words">
                 Our expert team is available 7 days a week to answer all your real estate queries.
               </p>
               <a
@@ -142,7 +142,7 @@ export default function FAQ() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="lg:col-span-3 space-y-3"
+            className="lg:col-span-3 space-y-3 min-w-0 w-full"
           >
             {faqs.map((item, i) => (
               <FAQItem

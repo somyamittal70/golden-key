@@ -9,7 +9,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Phone",
-    value: "+91 9026611045",
+    value: "+91 70112 14499",
     sub: "Mon–Sat, 9AM – 7PM",
   },
   {
@@ -20,7 +20,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Email",
-    value: "hello@firstkeyhomes.in",
+    value: "info@goldenkeysrealty.online",
     sub: "Reply within 24 hours",
   },
   {
@@ -31,8 +31,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Office Address",
-    value: "Shop No.16, Second Floor, Opus Mall",
-    sub: "Sidharth Vihar",
+    value: "Galaxy Diamond Plaza",
+    sub: "Greater Noida, Uttar Pradesh, India",
   },
 ];
 
@@ -61,8 +61,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact-us" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+    <section id="contact-us" className="py-20 bg-white overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" ref={ref}>
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -81,13 +81,13 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 w-full">
           {/* Left: Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-2 space-y-6"
+            className="lg:col-span-2 space-y-6 min-w-0"
           >
             {contactInfo.map((info, i) => (
               <motion.div
@@ -95,15 +95,15 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 + i * 0.1 }}
-                className="flex items-start gap-5 p-5 rounded-xl border border-gray-100 hover:border-[#c18c3b] hover:shadow-md transition-all duration-300"
+                className="flex items-start gap-4 sm:gap-5 p-4 sm:p-5 rounded-xl border border-gray-100 hover:border-[#c18c3b] hover:shadow-md transition-all duration-300 min-w-0"
               >
                 <div className="w-12 h-12 rounded-xl bg-navy-700/5 flex items-center justify-center flex-shrink-0">
                   {info.icon}
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-xs font-semibold text-[#c18c3b] uppercase tracking-widest mb-1">{info.label}</p>
-                  <p className="font-semibold text-navy-700">{info.value}</p>
-                  <p className="text-gray-400 text-sm">{info.sub}</p>
+                  <p className="font-semibold text-navy-700 break-words">{info.value}</p>
+                  <p className="text-gray-400 text-sm break-words">{info.sub}</p>
                 </div>
               </motion.div>
             ))}
@@ -111,15 +111,15 @@ export default function Contact() {
             {/* Social */}
             <div className="pt-4">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Follow Us</p>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 {/* Facebook */}
-                <a href="#" className="w-10 h-10 rounded-xl bg-navy-700/5 hover:bg-navy-700 flex items-center justify-center group transition-colors duration-300">
+                <a href="#" className="w-10 h-10 rounded-xl bg-navy-700/5 hover:bg-navy-700 flex items-center justify-center group transition-colors duration-300 flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <path d="M13 2H11C10.2 2 9 2.6 9 4V6H13L12.4 9H9V16H6V9H4V6H6V4C6 2.3 7.3 1 9 1H13V2Z" fill="#032b53" className="group-hover:fill-white transition-colors"/>
                   </svg>
                 </a>
                 {/* Instagram */}
-                <a href="#" className="w-10 h-10 rounded-xl bg-navy-700/5 hover:bg-navy-700 flex items-center justify-center group transition-colors duration-300">
+                <a href="#" className="w-10 h-10 rounded-xl bg-navy-700/5 hover:bg-navy-700 flex items-center justify-center group transition-colors duration-300 flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <rect x="2" y="2" width="14" height="14" rx="4" stroke="#032b53" strokeWidth="1.8" className="group-hover:stroke-white transition-colors"/>
                     <circle cx="9" cy="9" r="3.5" stroke="#032b53" strokeWidth="1.8" className="group-hover:stroke-white transition-colors"/>
@@ -127,7 +127,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 {/* LinkedIn */}
-                <a href="#" className="w-10 h-10 rounded-xl bg-navy-700/5 hover:bg-navy-700 flex items-center justify-center group transition-colors duration-300">
+                <a href="#" className="w-10 h-10 rounded-xl bg-navy-700/5 hover:bg-navy-700 flex items-center justify-center group transition-colors duration-300 flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <rect x="2" y="2" width="14" height="14" rx="3" stroke="#032b53" strokeWidth="1.5" className="group-hover:stroke-white transition-colors"/>
                     <path d="M5.5 8V13M5.5 6V5.5" stroke="#032b53" strokeWidth="1.8" strokeLinecap="round" className="group-hover:stroke-white transition-colors"/>
@@ -136,7 +136,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 {/* YouTube */}
-                <a href="#" className="w-10 h-10 rounded-xl bg-navy-700/5 hover:bg-navy-700 flex items-center justify-center group transition-colors duration-300">
+                <a href="#" className="w-10 h-10 rounded-xl bg-navy-700/5 hover:bg-navy-700 flex items-center justify-center group transition-colors duration-300 flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <rect x="1.5" y="3.5" width="15" height="11" rx="3" stroke="#032b53" strokeWidth="1.5" className="group-hover:stroke-white transition-colors"/>
                     <path d="M7.5 6.5L12 9L7.5 11.5V6.5Z" fill="#032b53" className="group-hover:fill-white transition-colors"/>
@@ -151,9 +151,9 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-3"
+            className="lg:col-span-3 min-w-0"
           >
-            <div className="bg-gray-50/80 rounded-2xl p-8 border border-gray-100">
+            <div className="bg-gray-50/80 rounded-2xl p-5 sm:p-8 border border-gray-100 w-full">
               <h3 className="font-display text-xl font-bold text-navy-700 mb-6">
                 Book a Free Consultation
               </h3>
@@ -173,9 +173,9 @@ export default function Contact() {
                   <p className="text-gray-500 text-sm">Our team will contact you within 24 hours.</p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-5 w-full">
                   <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
+                    <div className="min-w-0">
                       <label className="block text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Full Name *</label>
                       <input
                         type="text"
@@ -184,10 +184,10 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="Your Name"
-                        className="w-full border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
+                        className="w-full min-w-0 border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <label className="block text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Phone *</label>
                       <input
                         type="tel"
@@ -196,11 +196,11 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="Your Phone"
-                        className="w-full border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
+                        className="w-full min-w-0 border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       />
                     </div>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <label className="block text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Email</label>
                     <input
                       type="email"
@@ -208,11 +208,11 @@ export default function Contact() {
                       value={formData.email}
                       placeholder="your@email.com"
                       onChange={handleChange}
-                      className="w-full border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
+                      className="w-full min-w-0 border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                     />
                   </div>
                   <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
+                    <div className="min-w-0">
                       <label className="block text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Preferred City</label>
                       <input
                         type="text"
@@ -220,16 +220,16 @@ export default function Contact() {
                         value={formData.city}
                         onChange={handleChange}
                         placeholder="Delhi, Mumbai..."
-                        className="w-full border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
+                        className="w-full min-w-0 border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <label className="block text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Property Type</label>
                       <select
                         name="type"
                         value={formData.type}
                         onChange={handleChange}
-                        className="w-full border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
+                        className="w-full min-w-0 border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white"
                       >
                         <option value="">Select a Service</option>
                         <option>Residential</option>
@@ -240,7 +240,7 @@ export default function Contact() {
                       </select>
                     </div>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <label className="block text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wider">Message</label>
                     <textarea
                       name="message"
@@ -248,7 +248,7 @@ export default function Contact() {
                       onChange={handleChange}
                       rows={4}
                       placeholder="Tell us about your requirements — "
-                      className="w-full border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white resize-none"
+                      className="w-full min-w-0 border border-gray-200 focus:border-[#c18c3b] focus:ring-2 focus:ring-[#c18c3b]/20 rounded-lg px-4 py-3 text-sm outline-none transition-all bg-white resize-none"
                     />
                   </div>
                   <button
